@@ -1,6 +1,9 @@
 
 import { ReactNode } from "react";
 import Landing from './components/Landing'
+import Head from "next/head";
+import "./globals.css";
+
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,10 +11,12 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <html>
-      <body className="flex flex-col items-center">
+    <html lang="en">
+      <Head>
+        <title>My Next.js App</title>
+      </Head>
+      <body className="min-h-screen w-screen bg-black">
         <Landing />
-
       </body>
     </html>
   );
