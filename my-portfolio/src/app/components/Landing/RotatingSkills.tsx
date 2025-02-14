@@ -3,9 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const skills = [
-  { name: "React", color: "text-blue-500" },
-  { name: "TypeScript", color: "text-indigo-500" },
-  { name: "C", color: "text-red-500" },
+  { name: "ReactJS", color: "text-blue-400" },
+  { name: "TailwindCSS", color: "text-teal-400" },
+  { name: "NextJS", color: "text-amber-600" },
+  { name: "NodeJS", color: "text-green-500" },
+  { name: "Python", color: "text-yellow-500" },
+  { name: "Java", color: "text-red-600" },
+  { name: "JavaScript", color: "text-yellow-400" },
+  { name: "TypeScript", color: "text-blue-600" },
+  { name: "C", color: "text-orange-500" },
 ];
 
 const RotatingSkills = () => {
@@ -14,7 +20,7 @@ const RotatingSkills = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % skills.length);
-    }, 2000); // Timer to change text
+    }, 2500); // Timer to change text
 
     return () => clearInterval(interval);
   }, []);

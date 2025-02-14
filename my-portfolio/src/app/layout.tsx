@@ -1,7 +1,7 @@
 
 import { ReactNode } from "react";
 import Landing from './components/Landing/Landing'
-import Projects from "./components/Projects";
+import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact";
 import Head from "next/head";
 import "./globals.css";

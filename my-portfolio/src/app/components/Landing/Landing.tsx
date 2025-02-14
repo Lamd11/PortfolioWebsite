@@ -2,6 +2,10 @@
 import { motion } from "framer-motion";
 import RotatingSkills from "./RotatingSkills";
 import Navbar from "./Navbar";
+import Button from '@mui/material/Button';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 
 const Landing = () => {
     return (
@@ -18,6 +22,25 @@ const Landing = () => {
                             <h2 className="text-white">Proficient in </h2>
                             <RotatingSkills />
                         </div>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            startIcon={<FontAwesomeIcon icon={faEnvelope} />} 
+                            onClick={() => window.location.href = "mailto:Daniel.Lam3987@gmail.com"}
+                            sx={{
+                                marginTop: "2rem",
+                                width: "15rem",
+                                textTransform: "none", // Keeps the button text normal (not uppercase)
+                                fontSize: "1rem", // Slightly larger font
+                                padding: "0.75rem 1.5rem", // Add spacing for better appearance
+                                backgroundColor: "#1976d2", // Custom primary blue color
+                                "&:hover": {
+                                    backgroundColor: "#1565c0", // Slightly darker on hover
+                                },
+                            }}
+                        >
+                            Get in Touch
+                        </Button>
                     </div>
                 </div>
                 <div className="flex w-1/2 items-center">

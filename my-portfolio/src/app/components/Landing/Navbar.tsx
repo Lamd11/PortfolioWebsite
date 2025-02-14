@@ -35,8 +35,8 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="h-22 fixed top-0 z-50 mx-auto mt-2 flex w-[90%] w-full flex-col">
-            <div className="mx-auto flex w-full flex-wrap items-center justify-between p-4">
+        <nav className="h-22 fixed top-0 z-50 mx-auto mt-2 flex w-[85%] flex-col">
+            <div className="z-10 mx-auto flex w-full flex-wrap items-center justify-between p-4">
                 <h1 className="relative text-3xl font-bold">
                     <span className="relative inline-block">
                         {/* Colored Projection */}
