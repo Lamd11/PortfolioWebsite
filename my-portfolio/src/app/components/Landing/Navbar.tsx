@@ -1,18 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { motion } from "framer-motion";
 
-const anchors = ['home', 'projects', 'contact']
+const anchors = ['landing', 'projects', 'contact']
 
 const Navbar = () => {
 
-    const handleScroll = (anchorID: string) => {
+    const [activeSection, setActiveSection] = useState("landing");
+
+    const handleScrollToSection = (anchorID: string) => {
         document.getElementById(anchorID)?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            let currentSection = "landing";
+
+            anchors.forEach((anchor) => {
+                const section = document.getElementById(anchor);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        currentSection = anchor;
+                    }
+                }
+            });
+            setActiveSection(currentSection);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll)
+
+    }, []);
+
     return (
-        <nav className="h-22 fixed top-0 z-50 mx-auto mt-2 flex w-[85%] w-full flex-col">
+        <nav className="h-22 fixed top-0 z-50 mx-auto mt-2 flex w-[90%] w-full flex-col">
             <div className="mx-auto flex w-full flex-wrap items-center justify-between p-4">
                 <h1 className="relative text-3xl font-bold">
                     <span className="relative inline-block">
@@ -23,15 +46,25 @@ const Navbar = () => {
                     </span>
                     aniel
                 </h1>
-                <div className="flex space-x-6">
+                {/* Navigation with Bubble Effect */}
+                <div className="relative flex space-x-6 rounded-full bg-gray-800 p-2">
                     {anchors.map((anchor, index) => (
                         <div
                             key={index}
-                            className="relative z-0 flex cursor-pointer rounded-xl bg-gray-500 p-1"
-                            onClick={() => handleScroll(anchor.toLowerCase())}>
-                            <span className='relative z-10 text-xl font-medium text-gray-800'>
-                                {anchor.charAt(0).toUpperCase() + anchor.slice(1)}
-                            </span>
+                            className="relative cursor-pointer p-2 text-lg font-medium text-white"
+                            onClick={() => handleScrollToSection(anchor)}
+                        >
+                            {/* Background Bubble (Moves with Active Section) */}
+                            {activeSection === anchor && (
+                                <motion.div
+                                    layoutId="activeBubble"
+                                    className="absolute inset-0 z-0 rounded-full bg-gray-500"
+                                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                />
+                            )}
+
+                            {/* Anchor Text */}
+                            <span className="relative z-10">{anchor.charAt(0).toUpperCase() + anchor.slice(1)}</span>
                         </div>
                     ))}
                 </div>

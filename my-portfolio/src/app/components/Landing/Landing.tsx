@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const Landing = () => {
     return (
         <section className="flex h-screen w-full items-center justify-center text-White">
-            <Navbar className="h-22 fixed top-0 z-50 mx-auto mt-2 flex w-full flex-col"/>
+            <Navbar />
             <div className="flex h-full w-full flex-row">
                 <div className="flex w-1/2">
                     <div className="mx-auto my-auto flex flex-col justify-center">
@@ -14,7 +14,7 @@ const Landing = () => {
                         <h1 className="relative text-9xl font-bold">
                             I'm Daniel
                         </h1>
-                        <div className="mt-8 flex flex-row space-x-3 text-5xl font-semibold">
+                        <div className="mt-8 flex flex-row items-center space-x-3 text-5xl font-semibold">
                             <h2 className="text-white">Proficient in </h2>
                             <RotatingSkills />
                         </div>
