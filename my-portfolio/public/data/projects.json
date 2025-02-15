@@ -1,11 +1,26 @@
 [
-    {
-      "name": "University Student Council Presidential Campaign Website",
-      "startDate": "December 2024",
-      "endDate": "February 2025",
-      "description": "This website is designed to support the campaign of Tessa Smith's university student council presidential run. It provides information about her platform, qualifications, achievements, and plans for the university's community.",
-      "techStack": ["TypeScript", "ReactJS", "TailwindCSS"],
-      "websiteLink": "https://www.tessasmith4usc.com/",
-      "sourceCode": "https://github.com/Lamd11/Tessa-Smith-USC-Presidential-Campaign-Website"
-    }
+  {
+    "name": "University Student Council Presidential Campaign Website",
+    "date": "January 2025", 
+    "description": "This website is designed to support the campaign of Tessa Smith's university student council presidential run. It provides information about her platform, qualifications, achievements, and plans for the university's community.",
+    "techStack": ["TypeScript", "ReactJS", "TailwindCSS"],
+    "websiteLink": "https://www.tessasmith4usc.com/",
+    "sourceCode": "https://github.com/Lamd11/Tessa-Smith-USC-Presidential-Campaign-Website"
+  },
+  {
+    "name": "Milo Financial Aid",
+    "date": "November 2024", 
+    "description": "Milo Financial is a student-focused financial tracker app that helps users manage their day-to-day spending. It offers a sleek dashboard to visualize purchases, spending trends, and financial insights. The app also features an AI-powered assistant that utilizes your banking information to provide informed responses to queries like 'Can I afford this coffee?' or 'What are my recent transactions?'—empowering users to make smarter financial decisions.",
+    "techStack": ["NextJS", "ReactJS", "NodeJS"],
+    "websiteLink": "https://hack-western11.vercel.app/",
+    "sourceCode": "https://github.com/kevinchau03/MiloFinancial"
+  },
+  {
+    "name": "Calisthenics Builder",
+    "date": "October 2024", 
+    "description": "Calisthenics Builder is a web application designed to help people explore and stay updated on calisthenics workout trends. It offers the latest news on workout techniques, training tips, and fitness updates, sourced from popular news sources via NewsAPI. Built with a frontend in React and a backend using Express.js, the app provides an efficient, dynamic, and responsive experience.",
+    "techStack": ["JavaScript", "ReactJS", "TailwindCSS"],
+    "websiteLink": "https://calisthenics-builder.vercel.app/",
+    "sourceCode": "https://github.com/Lamd11/Calisthenics-Builder"
+  }
 ]

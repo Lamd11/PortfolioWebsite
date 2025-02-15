@@ -4,8 +4,7 @@ import ProjectSlide from './ProjectSlide';
 
 interface Project {
     name: string;
-    startDate: string;
-    endDate: string;
+    date: string;
     description: string;
     techStack: string[];
     websiteLink: string;

@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import SvgDesign from "./SvgDesign";
 
 
 const Landing = () => {
@@ -25,7 +26,7 @@ const Landing = () => {
                         <Button
                             variant="contained"
                             color="primary"
-                            startIcon={<FontAwesomeIcon icon={faEnvelope} />} 
+                            startIcon={<FontAwesomeIcon icon={faEnvelope} />}
                             onClick={() => window.location.href = "mailto:Daniel.Lam3987@gmail.com"}
                             sx={{
                                 marginTop: "2rem",
@@ -43,7 +44,8 @@ const Landing = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="flex w-1/2 items-center">
+                <div className="relative flex w-1/2 items-center">
+                    <SvgDesign />
                     {/* 
                     
                     <img
