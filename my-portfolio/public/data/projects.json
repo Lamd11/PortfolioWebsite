@@ -1,0 +1,11 @@
+[
+    {
+      "name": "University Student Council Presidential Campaign Website",
+      "startDate": "December 2024",
+      "endDate": "February 2025",
+      "description": "This website is designed to support the campaign of Tessa Smith's university student council presidential run. It provides information about her platform, qualifications, achievements, and plans for the university's community.",
+      "techStack": ["TypeScript", "ReactJS", "TailwindCSS"],
+      "websiteLink": "https://www.tessasmith4usc.com/",
+      "sourceCode": "https://github.com/Lamd11/Tessa-Smith-USC-Presidential-Campaign-Website"
+    }
+]
