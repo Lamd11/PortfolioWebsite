@@ -27,7 +27,7 @@ const Projects = () => {
         fetchProjects();
     }, []);
     return (
-        <section id="projects" className="h-screen w-full">
+        <section id="projects" className="h-full w-full">
             <h1 className="mb-6 text-4xl font-bold">PROJECTS</h1>
             <div className="space-y-10">
                 {projects.map((project, index) => (
