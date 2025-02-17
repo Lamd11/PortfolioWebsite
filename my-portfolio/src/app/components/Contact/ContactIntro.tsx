@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloud } from "@fortawesome/free-solid-svg-icons";
+
 import Mail from "./Mail";
 
 const ContactIntro = () => {
@@ -12,8 +11,8 @@ const ContactIntro = () => {
                     Let's talk.<br />Tell me about your ideas!
                 </h1>
 
-                <h3 className="text-xl font-semibold sm:text-lg md:text-xl lg:text-2xl">
-                    Get in contact with me <FontAwesomeIcon icon={faCloud} color="blue" />
+                <h3 className="text-xl font-semibold text-gray-400 sm:text-lg md:text-xl lg:text-2xl">
+                    Get in contact with me 🚀
                 </h3>
             </div>
             <div className="mt-12 flex w-full justify-center sm:mt-8">
