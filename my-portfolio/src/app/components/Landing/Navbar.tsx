@@ -1,17 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "@mui/material";
 
-const anchors = ['landing', 'projects', 'contact']
+const anchors = ["landing", "projects", "contact"];
 
 const Navbar = () => {
-
     const [activeSection, setActiveSection] = useState("landing");
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const socials = [
+        {
+            name: "Github",
+            icon: faGithub,
+            url: "https://github.com/your-profile",
+            hoverColor: "hover:text-blue-400",
+        },
+        {
+            name: "LinkedIn",
+            icon: faLinkedin,
+            url: "https://www.linkedin.com/in/daniel-lam3987/",
+            hoverColor: "hover:text-blue-500",
+        },
+    ]
 
     const handleScrollToSection = (anchorID: string) => {
-        document.getElementById(anchorID)?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(anchorID)?.scrollIntoView({ behavior: "smooth" });
+        setMenuOpen(false);
     };
 
     useEffect(() => {
@@ -30,74 +47,179 @@ const Navbar = () => {
             setActiveSection(currentSection);
         };
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll)
-
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Toggle body overflow when menu is open. Cool trick to stop user scrolling
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+        // Cleaner. Garunteee user can keep scrolling when they close the menu
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [menuOpen]);
+
     return (
-        <nav className="h-22 fixed top-0 z-50 mx-auto mt-2 flex w-[85%] flex-col">
-            <div className="z-10 mx-auto flex w-full flex-wrap items-center justify-between p-4">
-                <h1 className="relative text-3xl font-bold">
+        <nav className="fixed top-0 z-50 w-full bg-black/50 shadow-lg backdrop-blur-md">
+            <div className="flex w-full items-center justify-between p-4 md:mx-auto md:w-[90%]">
+                {/* Logo */}
+                <h1 className="z-50 text-3xl font-bold text-white">
                     <span className="relative inline-block">
-                        {/* Colored Projection */}
-                        <span className="absolute bottom-[10px] right-[10px] z-0 text-Blue">D</span>
-                        {/* Main Letter */}
-                        <span className="relative z-10 text-Pink">D</span>
+                        <span className="absolute bottom-[3px] right-[3px] text-blue-500 blur-sm">
+                            D
+                        </span>
+                        <span className="relative text-blue-500">D</span>
                     </span>
                     aniel
                 </h1>
-                {/* Navigation with Bubble Effect */}
-                <div className="relative flex space-x-6 rounded-full bg-gray-800 p-2">
+
+                {/* Desktop. Navigation with Bubble Effect */}
+                <div className="relative hidden space-x-6 rounded-full bg-gray-900/80 p-2 shadow-lg md:flex">
                     {anchors.map((anchor, index) => (
                         <div
                             key={index}
-                            className="relative cursor-pointer p-2 text-lg font-medium text-white"
+                            className="relative cursor-pointer p-2 text-lg font-medium text-white transition duration-300 hover:text-blue-400"
                             onClick={() => handleScrollToSection(anchor)}
                         >
-                            {/* Background Bubble (Moves with Active Section) */}
                             {activeSection === anchor && (
                                 <motion.div
                                     layoutId="activeBubble"
-                                    className="absolute inset-0 z-0 rounded-full bg-gray-500"
+                                    className="absolute inset-0 z-0 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]"
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                                 />
                             )}
-
-                            {/* Anchor Text */}
-                            <span className="relative z-10">{anchor.charAt(0).toUpperCase() + anchor.slice(1)}</span>
+                            <span className="relative z-10">
+                                {anchor.charAt(0).toUpperCase() + anchor.slice(1)}
+                            </span>
                         </div>
                     ))}
                 </div>
-                <div className="flex space-x-8">
-                    {[
-                        {
-                            name: 'Github',
-                            icon: faGithub,
-                            url: 'https://www.linkedin.com/in/daniel-lam3987/',
-                            hoverColor: 'hover:text-Blue',
-                        },
-                        {
-                            name: 'LinkedIn',
-                            icon: faLinkedin,
-                            url: 'https://ca.linkedin.com/in/tessa-smith-4206a8230',
-                            hoverColor: 'hover:text-blue-500',
-                        },
-                    ].map((social, index) => (
+
+                {/* Desktop. Social Links */}
+                <div className="hidden items-center space-x-6 md:flex">
+                    {socials.map((social, index) => (
                         <a
                             key={index}
                             href={social.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`text-lg ${social.hoverColor}`}
+                            className={`text-white transition duration-300 ${social.hoverColor}`}
                         >
-                            <FontAwesomeIcon icon={social.icon} className="text-4xl" />
+                            <FontAwesomeIcon
+                                icon={social.icon}
+                                className="text-3xl hover:scale-110"
+                            />
                         </a>
                     ))}
+                    <Button
+                        variant="contained"
+                        href="https://github.com/Lamd11/portfolio"
+                        target="_blank"
+                        
+                        sx={{
+                            backgroundColor: "#FFFFFF", // White background
+                            color: "#3b82f6", // Blue text
+                            fontWeight: "bold",
+                            textTransform: "none",
+                            border: "none",
+                            marginRight: "1.5rem", // Adds space to the right
+                            padding: "8px 16px", // Proper padding for a balanced look
+                        }}
+                    >
+                        Source Code
+                    </Button>
                 </div>
-            </div>
+                <button
+                    className="z-50 text-3xl text-White md:hidden"
+                    onClick={() => setMenuOpen(!menuOpen)}>
+                    <motion.div
+                        animate={{ rotate: menuOpen ? 180 : 0 }} // Rotates 180° when opened
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+                    </motion.div>
 
+                </button>
+            </div>
+            <AnimatePresence>
+                {menuOpen && (
+                    <motion.div
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "100%" }}
+                        transition={{ type: "easeinout", stiffness: 300, damping: 20 }}
+                        className="fixed left-0 top-0 z-40 flex h-screen w-full flex-col">
+                        <div className="flex h-2/5 flex-col bg-gray-950">
+                            <div className="mt-20 flex flex-col space-y-2 p-2 shadow-lg">
+                                {anchors.map((anchor, index) => (
+                                    <div
+                                        key={index}
+                                        className="relative cursor-pointer p-2 text-2xl font-semibold text-white transition duration-300"
+                                        onClick={() => handleScrollToSection(anchor)}
+                                    >
+                                        {activeSection === anchor && (
+                                            <motion.div
+                                                layoutId="activeBubble"
+                                                className="absolute inset-0 z-0 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]"
+                                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            />
+                                        )}
+                                        <span className="relative z-10">
+                                            {anchor.charAt(0).toUpperCase() + anchor.slice(1)}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex h-full flex-col bg-blue-500">
+                            <div className="absolute bottom-4 mx-3 flex w-full flex-col justify-center space-y-2">
+                                <h3 className="text-md font-medium">Socials:</h3>
+                                <div className="flex w-full justify-between">
+                                    <div className="flex space-x-6">
+                                        {socials.map((social, index) => (
+                                            <a
+                                                key={index}
+                                                href={social.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={`text-white transition duration-300 ${social.hoverColor}`}
+                                            >
+                                                <FontAwesomeIcon
+                                                    icon={social.icon}
+                                                    className="text-3xl"
+                                                />
+                                            </a>
+                                        ))}
+                                    </div>
+                                    <Button
+                                        variant="contained"
+                                        href="https://github.com/Lamd11/portfolio"
+                                        target="_blank"
+                                        sx={{
+                                            backgroundColor: "#FFFFFF", // White background
+                                            color: "#3b82f6", // Blue text
+                                            fontWeight: "bold",
+                                            textTransform: "none",
+                                            border: "none",
+                                            marginRight: "1.5rem", // Adds space to the right
+                                            padding: "8px 16px", // Proper padding for a balanced look
+                                        }}
+                                    >
+                                        Source Code
+                                    </Button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 };
 
-export default Navbar
+export default Navbar;

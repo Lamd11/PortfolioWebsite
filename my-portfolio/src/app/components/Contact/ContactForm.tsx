@@ -49,7 +49,7 @@ const ContactForm = () => {
         <section className="mx-auto flex h-screen w-[90%] items-center justify-center">
             <form
                 onSubmit={handleSubmit}
-                className="w-full max-w-lg rounded-lg bg-white p-8">
+                className="w-full max-w-lg rounded-lg bg-white p-8 text-black">
                 <h2 className="mb-4 text-2xl font-semibold text-gray-800">Get in Touch</h2>
                 <input
                     type="text"
