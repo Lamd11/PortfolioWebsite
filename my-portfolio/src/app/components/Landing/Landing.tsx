@@ -21,13 +21,13 @@ const Landing = () => {
 
                         {/* Different heading for mobile & desktop */}
                         <h1 className="text-5xl font-bold md:hidden">Hi, I'm Daniel</h1>
-                        <h1 className="hidden text-5xl font-bold sm:text-7xl md:block md:text-8xl lg:text-9xl">
+                        <h1 className="hidden text-5xl font-bold sm:text-7xl md:block lg:text-8xl">
                             I'm Daniel
                         </h1>
 
                         <div className="mt-6 flex flex-col items-center space-y-3 sm:space-x-3 sm:space-y-0 md:flex-row">
                             <h2 className="text-3xl font-semibold md:text-4xl">I study </h2>
-                            <div className="overflow-visble flex flex-grow">
+                            <div className="flex flex-grow overflow-visible">
                                 <RotatingSkills />
                             </div>
                         </div>
