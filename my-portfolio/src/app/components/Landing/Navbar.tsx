@@ -119,7 +119,7 @@ const Navbar = () => {
                         variant="contained"
                         href="https://github.com/Lamd11/portfolio"
                         target="_blank"
-                        
+
                         sx={{
                             backgroundColor: "#FFFFFF", // White background
                             color: "#3b82f6", // Blue text
@@ -128,6 +128,11 @@ const Navbar = () => {
                             border: "none",
                             marginRight: "1.5rem", // Adds space to the right
                             padding: "8px 16px", // Proper padding for a balanced look
+                            transition: "all 0.3s ease-in-out",
+                            "&:hover": {
+                                backgroundColor: "#60a5fa",
+                                color: "#fff",
+                            },
                         }}
                     >
                         Source Code

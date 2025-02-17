@@ -3,15 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const skills = [
-  { name: "ReactJS", color: "text-blue-400" },
-  { name: "TailwindCSS", color: "text-teal-400" },
-  { name: "NextJS", color: "text-amber-600" },
-  { name: "NodeJS", color: "text-green-500" },
-  { name: "Python", color: "text-yellow-500" },
-  { name: "Java", color: "text-red-600" },
-  { name: "JavaScript", color: "text-yellow-400" },
-  { name: "TypeScript", color: "text-blue-600" },
-  { name: "C", color: "text-orange-500" },
+  { name: "Web Development", color: "text-blue-400" },
+  { name: "UI/UX Design", color: "text-teal-400" },
+  { name: "Full-Stack", color: "text-amber-600" },
+  { name: "Cloud Computing", color: "text-green-500" },
+  { name: "SEO", color: "text-yellow-500" },
+  { name: "API Development", color: "text-red-600" },
 ];
 
 const RotatingSkills = () => {
@@ -26,7 +23,7 @@ const RotatingSkills = () => {
   }, []);
 
   return (
-    <div className="relative flex h-[3.8rem] w-1/2 items-center justify-center overflow-hidden">
+    <div className="relative flex w-full items-center justify-center overflow-hidden md:h-[3.8rem]">
       <AnimatePresence mode="wait">
         <motion.div
           key={skills[index].name}
@@ -34,7 +31,7 @@ const RotatingSkills = () => {
           animate={{ y: "0%"}}
           exit={{ y: "-120%"}}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className={`left-0 absolute text-5xl ${skills[index].color}`}
+          className={`md:left-0 md:absolute text-4xl lg:text-5xl whitespace-nowrap ${skills[index].color}`}
         >
           {skills[index].name}
         </motion.div>
