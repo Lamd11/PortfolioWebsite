@@ -1,11 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
 import RotatingSkills from "./RotatingSkills";
 import Navbar from "./Navbar";
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import SvgDesign from "./SvgDesign";
 import TechStack from "./TechStack";
 
 const Landing = () => {
@@ -20,9 +18,9 @@ const Landing = () => {
                         <h3 className="hidden text-2xl font-bold md:block md:text-4xl">Hi,</h3>
 
                         {/* Different heading for mobile & desktop */}
-                        <h1 className="text-5xl font-bold md:hidden">Hi, I'm Daniel</h1>
+                        <h1 className="text-5xl font-bold md:hidden">Hi, I&#39;m Daniel</h1>
                         <h1 className="hidden text-5xl font-bold sm:text-7xl md:block lg:text-8xl">
-                            I'm Daniel
+                            I&#39;m Daniel
                         </h1>
 
                         <div className="mt-6 flex flex-col items-center space-y-3 sm:space-x-3 sm:space-y-0 md:flex-row">

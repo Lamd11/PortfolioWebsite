@@ -1,4 +1,4 @@
-# 🎓 University Student Council Presidential Campaign Website
+# Personal Portfolio Website
 My fully responsive portoflio website showcasing my projects, skills, and contact information! Thanks for visiting it and hope you receive inspiration or become well informed about me.
 
 ## Table of Contents
