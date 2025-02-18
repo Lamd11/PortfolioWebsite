@@ -30,7 +30,7 @@ const techStack: Record<string, { icon: React.ReactNode; color: string }> = {
 
 const ProjectSlide: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="relative flex h-[100vh] w-11/12 flex-col items-center justify-center space-y-6 rounded-lg p-8 text-white shadow-lg md:flex-row md:space-x-10 md:space-y-0">
+    <div className="relative flex min-h-screen w-11/12 flex-col items-center justify-center space-y-6 rounded-lg p-8 text-white shadow-lg md:flex-row md:space-x-10 md:space-y-0">
 
       {/* Project Details */}
       <div className="flex w-full flex-col justify-center md:w-1/2">

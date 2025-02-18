@@ -29,7 +29,7 @@ const Projects = () => {
     }, []);
     return (
         <section id="projects" className="h-full w-full">
-            <div> 
+            <div className="h-full w-full"> 
                 <h1 className="mb-6 text-4xl font-bold">PROJECTS</h1>
                 <div className="flex flex-col items-center justify-center space-y-10">
                     {projects.map((project, index) => (
