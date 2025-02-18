@@ -33,6 +33,7 @@ export const metadata = {
 import Landing from "./components/Landing/Landing";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -49,6 +50,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Contact />
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
