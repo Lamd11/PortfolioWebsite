@@ -40,7 +40,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className="h-full w-full">
       <body className="z-20 flex min-h-screen w-full flex-col space-y-12 bg-black outline">
-        <div id="landing">
+        <div id="home">
           <Landing />
         </div>
         <div id="projects">

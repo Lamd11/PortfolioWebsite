@@ -5,10 +5,10 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@mui/material";
 
-const anchors = ["landing", "projects", "contact"];
+const anchors = ["home", "projects", "contact"];
 
 const Navbar = () => {
-    const [activeSection, setActiveSection] = useState("landing");
+    const [activeSection, setActiveSection] = useState("home");
     const [menuOpen, setMenuOpen] = useState(false);
 
     const socials = [
@@ -33,7 +33,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            let currentSection = "landing";
+            let currentSection = "home";
 
             anchors.forEach((anchor) => {
                 const section = document.getElementById(anchor);
