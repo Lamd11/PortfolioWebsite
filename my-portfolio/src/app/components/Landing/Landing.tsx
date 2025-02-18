@@ -10,12 +10,12 @@ import TechStack from "./TechStack";
 
 const Landing = () => {
     return (
-        <section className="flex h-screen w-full flex-col items-center justify-center pt-44 text-white md:pt-0">
+        <section className="flex h-screen w-full flex-col items-center justify-center pt-44 text-white md:flex-row md:pt-0">
             <Navbar />
-            <div className="flex h-full w-full flex-col items-center md:flex-row">
+            <div className="flex h-full w-full flex-col items-center md:w-1/2 md:flex-row md:pl-12">
                 {/* Left Side - Text Content */}
-                <div className="flex w-full justify-center overflow-visible md:w-1/2">
-                    <div className="mx-auto my-auto flex flex-col justify-center text-center md:text-left">
+                <div className="flex w-full justify-center overflow-visible">
+                    <div className="my-auto flex w-full flex-col justify-center text-center md:ml-[6%] md:text-left">
                         {/* "Hi," for Desktop Only */}
                         <h3 className="hidden text-2xl font-bold md:block md:text-4xl">Hi,</h3>
 
@@ -54,12 +54,11 @@ const Landing = () => {
 
                     </div>
                 </div>
-
-                {/* Right Side - SVG Design */}
-                <div className="relative flex w-full justify-center md:w-1/2">
-                </div>
             </div>
-            <TechStack/>
+            <div className="flex h-full w-full flex-col items-center justify-center md:w-1/2 md:flex-row">
+                <TechStack />
+            </div>
+
         </section>
     );
 };

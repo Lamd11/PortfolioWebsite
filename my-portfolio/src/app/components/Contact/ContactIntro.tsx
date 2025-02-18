@@ -7,7 +7,7 @@ const ContactIntro = () => {
 
         <div className="left-auto mx-auto my-auto flex h-full w-3/4 flex-col justify-center">
             <div className="mx-auto space-y-4 text-left">
-                <h1 className="text-black-custom justify-center text-left text-4xl font-bold sm:text-7xl">
+                <h1 className="text-black-custom justify-center text-left text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
                     Let's talk.<br />Tell me about your ideas!
                 </h1>
 

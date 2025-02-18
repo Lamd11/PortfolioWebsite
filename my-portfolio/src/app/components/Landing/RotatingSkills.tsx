@@ -23,7 +23,7 @@ const RotatingSkills = () => {
   }, []);
 
   return (
-    <div className="relative flex w-full items-center justify-center overflow-hidden md:h-[3.8rem]">
+    <div className="relative flex w-full items-center justify-center overflow-y-hidden overflow-x-visible md:h-[3.8rem]">
       <AnimatePresence mode="wait">
         <motion.div
           key={skills[index].name}
@@ -31,7 +31,7 @@ const RotatingSkills = () => {
           animate={{ y: "0%"}}
           exit={{ y: "-120%"}}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className={`md:left-0 md:absolute text-4xl lg:text-5xl whitespace-nowrap ${skills[index].color}`}
+          className={`md:left-0 md:absolute text-3xl md:text-4xl lg:text-5xl whitespace-nowrap ${skills[index].color}`}
         >
           {skills[index].name}
         </motion.div>
