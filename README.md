@@ -1,7 +1,8 @@
 # Personal Portfolio Website
 My fully responsive portoflio website showcasing my projects, skills, and contact information! Thanks for visiting it and hope you receive inspiration or become well informed about me.
 
-![Preview Image]([https://github.com/Lamd11/PortfolioWebsite/blob/main/public/images/preview_image.png]
+<img width="1160" alt="Preview Image" src="https://github.com/Lamd11/PortfolioWebsite/blob/main/public/images/preview_image.png">
+
 
 ## Table of Contents
 
