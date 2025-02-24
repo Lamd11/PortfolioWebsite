@@ -10,6 +10,7 @@ const anchors = ["home", "projects", "contact"];
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState("home");
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false)
 
     const socials = [
         {
@@ -50,6 +51,19 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    useEffect(() => {
+        const handleScrollBG = () => {
+            if (window.scrollY > 80) {
+                setIsScrolled(true);
+            }
+            else {
+                setIsScrolled(false);
+            }
+        }
+        window.addEventListener("scroll", handleScrollBG);
+        return () => window.removeEventListener("scrol", handleScrollBG)
+    })
+
     // Toggle body overflow when menu is open. Cool trick to stop user scrolling
     useEffect(() => {
         if (menuOpen) {
@@ -64,17 +78,11 @@ const Navbar = () => {
     }, [menuOpen]);
 
     return (
-        <nav className="fixed top-0 z-50 w-full bg-black/50 shadow-lg backdrop-blur-md">
+        <nav className={`fixed top-0 z-50 w-full ${isScrolled ? "bg-slate-950" : "bg-black/50"} transition-colors duration-200 shadow-lg`}>
             <div className="flex w-full items-center justify-between p-4 md:mx-auto md:w-[90%]">
                 {/* Logo */}
                 <h1 className="z-50 text-3xl font-bold text-white">
-                    <span className="relative inline-block">
-                        <span className="absolute bottom-[3px] right-[3px] text-blue-500 blur-sm">
-                            D
-                        </span>
-                        <span className="relative text-blue-500">D</span>
-                    </span>
-                    aniel
+                    Daniel
                 </h1>
 
                 {/* Desktop. Navigation with Bubble Effect */}
