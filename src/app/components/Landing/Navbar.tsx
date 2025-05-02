@@ -5,7 +5,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@mui/material";
 
-const anchors = ["home", "projects", "contact"];
+const anchors = ["home", "experience", "about", "projects", "contact"];
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState("home");

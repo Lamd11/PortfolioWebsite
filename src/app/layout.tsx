@@ -31,6 +31,8 @@ export const metadata = {
 };
 
 import Landing from "./components/Landing/Landing";
+import Experience from "./components/Experience/Experience";
+import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import { Analytics } from '@vercel/analytics/react';
@@ -42,6 +44,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <body className="z-20 flex min-h-screen w-full flex-col space-y-12 bg-black outline">
         <div id="home">
           <Landing />
+        </div>
+        <div id="experience">
+          <Experience />
+        </div>
+        <div id="about">
+          <About />
         </div>
         <div id="projects">
           <Projects />
