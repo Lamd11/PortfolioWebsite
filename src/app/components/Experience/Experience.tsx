@@ -13,10 +13,11 @@ const Experience = () => {
   return (
     <section className="flex h-full min-h-screen w-full flex-col items-center justify-center text-white md:flex-row">
       {/* Left Column - Experience */}
-      <div className="flex h-full w-full flex-col items-center justify-center px-6 md:w-1/2 md:px-12">
-        <div className="my-auto w-full max-w-xl">
-          <h2 className="mb-6 text-5xl font-bold">Experience</h2>
-          <div className="flex justify-center md:justify-start">
+      <div className="flex h-full w-full flex-col items-center justify-center px-6 md:px-24">
+        <div className="my-auto w-full mr-auto ">
+          <h2 className="mb-6 text-5xl font-bold text-left">Experience</h2>
+          <div className="flex flex-col justify-center md:justify-start max-w-xl mx-auto">
+            <Work />
             <Button
               variant="contained"
               color="primary"
@@ -36,15 +37,6 @@ const Experience = () => {
               View my Resume/CV
             </Button>
           </div>
-          <Work />
-        </div>
-      </div>
-
-      {/* Right Column - Skills */}
-      <div className="flex h-full w-full flex-col items-center justify-center px-6 md:w-1/2 md:px-12">
-        <div className="my-auto w-full max-w-xl">
-          <h2 className="mb-6 text-5xl font-bold">Skills</h2>
-          <TechStack />
         </div>
       </div>
     </section>

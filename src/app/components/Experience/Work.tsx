@@ -4,7 +4,6 @@ const Work = () => {
   return (
     <div className="w-full px-6 py-8 md:px-12">
       <div className="mb-8">
-        <h2 className="mb-4 text-3xl font-bold text-white">Experience</h2>
 
         <div className="mb-6">
           <h3 className="text-xl font-semibold text-white">
