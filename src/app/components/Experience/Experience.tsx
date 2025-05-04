@@ -11,7 +11,7 @@ const viewResume = "https://drive.google.com/file/d/14BC_Wp-M8knlKsd7ys0md9JkNQr
 
 const Experience = () => {
   return (
-    <section className="flex h-full h-screen w-full flex-col items-center justify-center text-white md:flex-row">
+    <section className="flex h-full w-full flex-col items-center justify-center text-white md:flex-row">
       {/* Left Column - Experience */}
 
       <div className="flex h-full w-full flex-col items-center justify-center px-6 md:px-24">
