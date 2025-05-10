@@ -8,29 +8,29 @@ const interests = [
         key: "programming",
         label: "Programming",
         color: "text-cyan-400",
-        description: "Building tools, automating workflows, and making side projects in React and Node.js.",
-        img: "/images/milofinancial.png",
+        description: "Me in the wild with my friend coding",
+        img: "/images/about/about_programming.jpg",
     },
     {
         key: "calisthenics",
         label: "Calisthenics",
         color: "text-green-400",
-        description: "Practicing bodyweight workouts like planches, levers, and muscle-ups.",
-        img: "/images/milofinancial.png",
+        description: "Practicing bodyweight workouts weighted dips and pull ups",
+        img: "/images/about/about_calisthenics.jpg",
     },
     {
         key: "cooking",
         label: "Cooking",
         color: "text-orange-500",
-        description: "Trying new recipes or improvising quick meals after workouts or coding sessions.",
-        img: "/images/milofinancial.png",
+        description: "Setting up a meal of hot pot with my friends!",
+        img: "/images/about/about_cooking.jpg",
     },
     {
         key: "reading",
         label: "Reading",
         color: "text-red-400",
-        description: "Exploring non-fiction and sci-fi books that inspire or challenge my thinking.",
-        img: "/images/milofinancial.png",
+        description: "Exploring non-fiction and books about life. Here's a list of books I've read on the able.",
+        img: "/images/about/about_books.png",
     },
 ];
 
@@ -60,12 +60,12 @@ export default function AboutMe() {
 
             <div className="flex flex-col items-center justify-center gap-10 md:gap-10">
                 <div className="w-full">
-                <h2 className="font mb-12 ml-0 max-w-3xl text-left text-2xl">
-                    I'm a developer who's worked on both <span className="font-bold text-blue-500">front{"-"}end</span> and <span className="font-bold text-blue-500">back{"-"}end</span> proponents of web projects. I specialize in practicality, accessibility, and am a practitioner of innovative solutions.
-                </h2>
+                    <h2 className="font mb-12 ml-0 max-w-3xl text-left text-2xl">
+                        I'm a developer who's worked on both <span className="font-bold text-blue-500">front{"-"}end</span> and <span className="font-bold text-blue-500">back{"-"}end</span> proponents of web projects. I specialize in practicality, accessibility, and am a practitioner of innovative solutions.
+                    </h2>
                 </div>
-                
-                <div className="flex flex-col-reverse items-center justify-center gap-10 md:flex-row md:gap-20">
+
+                <div className="flex flex-col-reverse items-center justify-center gap-10 md:gap-20 lg:flex-row">
                     {/* Text content */}
                     <div className="max-w-5xl space-y-4 text-lg leading-relaxed">
                         <p>
@@ -105,7 +105,7 @@ export default function AboutMe() {
 
                     {/* Image and description */}
                     <div className="flex flex-col items-center gap-4">
-                        <div className="relative h-64 w-64 rounded-xl bg-neutral-800 shadow-lg">
+                        <div className="relative h-[24rem] w-[24rem] rounded-xl bg-neutral-900 shadow-lg md:h-[30rem] md:w-[30rem] lg:h-[38rem] lg:w-[38rem]">
                             <Image
                                 src={current.img}
                                 alt={current.label}
