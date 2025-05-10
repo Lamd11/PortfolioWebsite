@@ -29,8 +29,8 @@ const Projects = () => {
     }, []);
     return (
         <section id="projects" className="h-full w-full">
-            <div className="h-full w-full"> 
-                <h1 className="mb-6 text-4xl font-bold">PROJECTS</h1>
+            <div className="flex h-full w-full flex-col"> 
+            <h1 className="mx-auto mb-8 text-5xl font-bold text-white">Projects</h1>
                 <div className="flex flex-col items-center justify-center space-y-10">
                     {projects.map((project, index) => (
                         <ProjectSlide key={index} project={project} />

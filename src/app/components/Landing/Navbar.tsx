@@ -5,7 +5,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@mui/material";
 
-const anchors = ["home", "projects", "contact"];
+const anchors = ["home", "experience", "about", "projects", "contact"];
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState("home");
@@ -28,8 +28,13 @@ const Navbar = () => {
     ]
 
     const handleScrollToSection = (anchorID: string) => {
-        document.getElementById(anchorID)?.scrollIntoView({ behavior: "smooth" });
-        setMenuOpen(false);
+        const section = document.getElementById(anchorID);
+        const yOffset = -80; // Adjust based on your navbar height
+        if (section) {
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+            setMenuOpen(false);
+        }
     };
 
     useEffect(() => {
