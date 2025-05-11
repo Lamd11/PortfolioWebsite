@@ -61,7 +61,7 @@ export default function AboutMe() {
             <div className="flex flex-col items-center justify-center gap-10 md:gap-10">
                 <div className="w-full">
                     <h2 className="font mb-12 ml-0 max-w-3xl text-left text-2xl">
-                        I'm a developer who's worked on both <span className="font-bold text-blue-500">front{"-"}end</span> and <span className="font-bold text-blue-500">back{"-"}end</span> proponents of web projects. I specialize in practicality, accessibility, and am a practitioner of innovative solutions.
+                        I&apos;m a developer who&apos;s worked on both <span className="font-bold text-blue-500">front{"-"}end</span> and <span className="font-bold text-blue-500">back{"-"}end</span> proponents of web projects. I specialize in practicality, accessibility, and am a practitioner of innovative solutions.
                     </h2>
                 </div>
 

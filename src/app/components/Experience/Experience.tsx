@@ -1,7 +1,5 @@
 "use client";
 
-import Skills from "./Skills";
-import TechStack from "./TechStack";
 import Work from "./Work";
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
