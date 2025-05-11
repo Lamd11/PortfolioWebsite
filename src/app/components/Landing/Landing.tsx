@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import TechStack from "./TechStack";
 
 const Landing = () => {
     return (
@@ -54,7 +53,7 @@ const Landing = () => {
                 </div>
             </div>
             <div className="flex h-full w-full flex-col items-center justify-center md:w-1/2 md:flex-row">
-                <TechStack />
+                
             </div>
 
         </section>
