@@ -2,6 +2,7 @@
 import RotatingSkills from "./RotatingSkills";
 import Navbar from "./Navbar";
 import Button from '@mui/material/Button';
+import OrbitingPixels from "./OrbitingPixels";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -52,8 +53,8 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex h-full w-full flex-col items-center justify-center md:w-1/2 md:flex-row">
-                
+            <div className="relative flex h-full w-full flex-col items-center justify-center md:w-1/2 md:flex-row">
+                <OrbitingPixels />
             </div>
 
         </section>
