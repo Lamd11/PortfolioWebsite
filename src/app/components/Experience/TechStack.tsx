@@ -21,7 +21,15 @@ import {
   SiMysql,
 } from "react-icons/si";
 
-const techStack = [
+import type { IconType } from "react-icons";
+
+type Tech = {
+  name: string;
+  icon: IconType;
+  color: string;
+};
+
+const techStack: Tech[] = [
   { name: "ReactJS", icon: FaReact, color: "text-blue-400" },
   { name: "TailwindCSS", icon: SiTailwindcss, color: "text-teal-400" },
   { name: "NextJS", icon: SiNextdotjs, color: "text-gray-900" },
@@ -65,21 +73,21 @@ export default function TechStackRow() {
       className="flex flex-wrap justify-center gap-6 p-4"
     >
       {techStack.map((tech, index) => {
-  const Icon = tech.icon;
-  return (
-    <motion.div
-      key={index}
-      variants={item}
-      whileHover={{ scale: 1.2, rotate: 5 }}
-      className={`flex flex-col items-center transition-transform duration-75 ${tech.color} `}
-    >
-      <div className="text-7xl">
-        <Icon />
-      </div>
-      <span className="mt-1 text-lg text-gray-600 dark:text-gray-300">{tech.name}</span>
-    </motion.div>
-  );
-})}
+        const Icon = tech.icon;
+        return (
+          <motion.div
+            key={index}
+            variants={item}
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            className={`flex flex-col items-center transition-transform duration-75 ${tech.color} `}
+          >
+            <div className="text-7xl">
+              <Icon />
+            </div>
+            <span className="mt-1 text-lg text-gray-600 dark:text-gray-300">{tech.name}</span>
+          </motion.div>
+        );
+      })}
 
     </motion.div>
   );
