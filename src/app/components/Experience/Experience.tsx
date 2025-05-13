@@ -2,6 +2,7 @@
 
 import Work from "./Work";
 import Button from '@mui/material/Button';
+import TechStack from "./TechStack";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,7 +10,7 @@ const viewResume = "https://drive.google.com/file/d/14BC_Wp-M8knlKsd7ys0md9JkNQr
 
 const Experience = () => {
   return (
-    <section className="flex h-full w-full flex-col items-center justify-center text-white md:flex-row">
+    <section className="flex h-full w-full flex-col items-center justify-center text-white">
       {/* Left Column - Experience */}
 
       <div className="flex h-full w-full flex-col items-center justify-center px-6 md:px-24">
@@ -44,6 +45,8 @@ const Experience = () => {
           </div>
         </div>
       </div>
+      <h1 className="mx-auto mb-12 mt-12 text-3xl font-bold">My Skills</h1>
+      <TechStack />
     </section>
   );
 };
