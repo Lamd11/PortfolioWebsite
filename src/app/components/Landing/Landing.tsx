@@ -8,7 +8,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Landing = () => {
     return (
-        <section className="flex h-screen w-full flex-col items-center justify-center pt-44 text-white md:flex-row md:pt-0">
+        <section className="flex h-screen w-full flex-col items-center justify-center pt-64 text-white md:flex-row md:pt-0">
             <Navbar />
             <div className="flex h-full w-full flex-col items-center md:w-1/2 md:flex-row md:pl-12">
                 {/* Left Side - Text Content */}
