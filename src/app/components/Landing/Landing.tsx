@@ -24,7 +24,7 @@ const Landing = () => {
                         </h1>
 
                         <div className="mt-6 flex flex-col items-center space-y-3 sm:space-x-3 sm:space-y-0 md:flex-row">
-                            <h2 className="text-3xl font-semibold md:text-4xl">I study </h2>
+                            <h2 className="text-3xl font-semibold md:text-4xl">I do </h2>
                             <div className="flex flex-grow overflow-visible">
                                 <RotatingSkills />
                             </div>
