@@ -10,6 +10,17 @@ interface WorkExperience {
 
 const workExperiences: WorkExperience[] = [
   {
+    title: "Software Engineer Intern",
+    duration: "July 2025 – Present",
+    organization: "Incubella",
+    location: "Montreal, QC",
+    responsibilities: [
+      "Building a FastAPI microservice to fetch, filter, and process tweets from X API and Apify for sentiment analysis, removing noise and boosting model accuracy over 100+ tweets",
+      "Engineering Grok AI sentiment workflows with 10+ prompt-engineered patterns, delivering positive/negative polarity scores, narrative summaries, and contextual analysis",
+      "Converted and designed 15+ Figma screens to Next.js pages using reusable React Components, reducing redundant code by 30% and improving UI consistency"
+    ],
+  },
+  {
     title: "Web Developer",
     duration: "December 2024 – February 2025",
     organization: "University Student Council Presidential Campaign",

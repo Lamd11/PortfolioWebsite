@@ -6,7 +6,7 @@ import TechStack from "./TechStack";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
-const viewResume = "https://drive.google.com/file/d/16jBpga5oveBSGa2X1K-K5HpD7k8MqESI/view?usp=sharing";
+const viewResume = "https://drive.google.com/file/d/1U7VX3S_xGUXDEEtbPoohURoTFVn86pgH/view?usp=sharing";
 
 const Experience = () => {
   return (
