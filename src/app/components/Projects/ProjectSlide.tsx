@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaReact, FaNodeJs, FaPython, FaJava, FaCss3Alt } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiJavascript } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiJavascript, SiFastapi } from "react-icons/si";
 
 // Define the Project interface
 interface Project {
@@ -21,6 +21,7 @@ const techStack: Record<string, { icon: React.ReactNode; color: string }> = {
   NextJS: { icon: <SiNextdotjs size={32} />, color: "text-gray-900" },
   NodeJS: { icon: <FaNodeJs size={32} />, color: "text-green-500" },
   Python: { icon: <FaPython size={32} />, color: "text-yellow-500" },
+  FastAPI: { icon: <SiFastapi size={32} />, color: "text-green-400" },
   Java: { icon: <FaJava size={32} />, color: "text-red-600" },
   JavaScript: { icon: <SiJavascript size={32} />, color: "text-yellow-400" },
   TypeScript: { icon: <SiTypescript size={32} />, color: "text-blue-600" },

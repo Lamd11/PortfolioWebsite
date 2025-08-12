@@ -1,5 +1,14 @@
 [
   {
+    "name": "withinFlo - AI Quality Assurance Documentation Generator",
+    "date": "June 2025", 
+    "description": "AI-powered Quality Assurance Test Case Documentation App that analyzes websites and generates comprehensive test case documentation. Features website crawling, AI-powered test case generation, PDF export functionality, real-time progress tracking, and interactive test case viewer.",
+    "techStack": ["NextJS", "Python", "FastAPI"],
+    "websiteLink": "https://withinflo.vercel.app/",
+    "sourceCode": "https://github.com/Lamd11/withinFlo",
+    "image": "/images/withinflo.png"
+  },
+  {
     "name": "University Student Council Presidential Campaign Website",
     "date": "January 2025", 
     "description": "This website is designed to support the campaign of Tessa Smith's university student council presidential run. It provides information about her platform, qualifications, achievements, and plans for the university's community.",
